@@ -30,7 +30,7 @@ fun main() {
             if (intStock > 0) {  // Check if stock is greater than 0 before subtracting
                 intStock -= 1
                 combArray[1][index] = intStock.toString()
-                println("${combArray[0][index]} has ${combArray[1][index]} stock now.")
+                println("You used 1 ${combArray[0][index]}. ${combArray[0][index]} has ${combArray[1][index]} stock now.")
             } else {
                 println("Not enough stock!")
             }
@@ -39,7 +39,7 @@ fun main() {
             var intStock = combArray[1][index].toInt()
             intStock += 1
             combArray[1][index] = intStock.toString()
-            println("${combArray[0][index]} has ${combArray[1][index]} stock now.")
+            println("You added 1 to ${combArray[0][index]}. ${combArray[0][index]} has ${combArray[1][index]} stock now.")
         }
 
 
