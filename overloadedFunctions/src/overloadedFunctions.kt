@@ -39,7 +39,7 @@ fun main(){
         sayHello(customerName, phoneNumber, bizName)
 
     } else {
-        println("Something went wrong. Terminating program!: ")
+        println("Something went wrong. Terminating program!")
     }
 
 
