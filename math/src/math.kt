@@ -16,7 +16,7 @@ fun calculateTipAndTaxes(subtotal: Double): Double{
 fun main() {
     var sum = 0.0
 
-    do {
+    do { // Ask for input until user enters 0, add input to sum
         println("Enter item price (enter 0 to finish):")
         val itemPrice = readln().toDouble()
 
@@ -30,9 +30,9 @@ fun main() {
     println("Adding 2.5% Sales Tax...")
     println("Adding suggested gratuity of 17.5%...\n")
 
-    val formatPlz = DecimalFormat("#.##") //Formatting
+    val formatPlz = DecimalFormat("#.##") //Define formatting
 
-    println("Total is: $${formatPlz.format(calculateTipAndTaxes(sum))}")
+    println("Total is: $${formatPlz.format(calculateTipAndTaxes(sum))}") // Calculate and display
 
 
 }
