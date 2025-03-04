@@ -50,10 +50,13 @@ class Employee(
 }
 
 fun main() {
-    val employee1 = Employee("Maria Cosenza", PositionTitle.Production, false, 15.0, 1)
-    val employee2 = Employee("Juan Arredondo", PositionTitle.Technical, true, 60.0, 2)
+    val employee1 = Employee("Maria Cosenza", PositionTitle.Production, false, 15.0, 2)
+    val employee2 = Employee("Juan Arredondo", PositionTitle.Technical, true, 60.0, 1)
+    val employee3 = Employee("Lionel Arredondo", PositionTitle.Secretarial, false, 23.0, 3)
 
-    employee1.displayPayDetails(45.0)
+    employee1.displayPayDetails(50.0)
     println()
-    employee2.displayPayDetails(38.0)
+    employee2.displayPayDetails(45.0)
+    println()
+    employee3.displayPayDetails(35.0)
 }
