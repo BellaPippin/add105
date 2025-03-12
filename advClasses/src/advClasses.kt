@@ -1,3 +1,9 @@
+/**
+ * enum class PositionTitle
+ * @author Maria Cosenza
+ * Date: 3/11/2025
+ */
+
 enum class PositionTitle {
     Administration,
     Production,
@@ -7,6 +13,18 @@ enum class PositionTitle {
     Secretarial
 }
 
+/**
+ * class Employee
+ * @author Maria Cosenza
+ * Date: 3/11/2025
+ * @param
+ * name: Name of Employee
+ * position: from enum PositionTitle, sets employee's title
+ * salary: defines whether employee is salary or hourly
+ * payRate: amount of hourly pay
+ * shift: defines which shift the worker does.
+ */
+
 class Employee(
     val name: String,
     val position: PositionTitle,
@@ -15,6 +33,15 @@ class Employee(
     val shift: Int
 ) {
 
+    /**
+     * function calculatePay
+     * @author Maria Cosenza
+     * Date: 3/11/2025
+     * @param
+     * hoursIn: amount of hours worked weekly
+     * @return
+     * totalPay: double -- calculation of pay based on shift, salary status and hours worked
+     */
     fun calculatePay(hoursIn: Double): Double {
         var totalPay = 0.0
 
@@ -39,7 +66,15 @@ class Employee(
         }
         return totalPay
     }
-
+    /**
+     * function displayPayDetails
+     * @author Maria Cosenza
+     * Date: 3/11/2025
+     * @param
+     * hoursIn: amount of hours worked
+     * @return
+     * prints employee's information and calculated pay
+     */
     fun displayPayDetails(hoursIn: Double) {
         val totalPay = calculatePay(hoursIn)
         println("Employee: $name")
@@ -49,6 +84,13 @@ class Employee(
     }
 }
 
+/**
+ * function Main
+ * @author Maria Cosenza
+ * Date: 3/11/2025
+ *
+ * runs program
+ */
 fun main() {
     val employee1 = Employee("Maria Cosenza", PositionTitle.Production, false, 15.0, 2)
     val employee2 = Employee("Juan Arredondo", PositionTitle.Technical, true, 60.0, 1)
