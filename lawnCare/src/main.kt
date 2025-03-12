@@ -18,6 +18,7 @@ class Commercial(
     fun calculateWeeklyCharge() {
         val baseCharge = squareFootage * commercialRate
         val totalCharge: Double
+        // Add discount if multi property is true
         if (multiProperty) {
             totalCharge = baseCharge * 0.9
         } else {
@@ -41,6 +42,7 @@ class Residential(
     fun calculateWeeklyCharge() {
         val baseCharge = squareFootage * residentialRate
         val totalCharge: Double
+        // Add discount is customer is senior
         if (senior) {
             totalCharge = baseCharge * 0.85
         } else {
@@ -52,6 +54,7 @@ class Residential(
     }
 }
 
+// Run menu
 fun main() {
     while (true) {
         println("\nSelect Customer Type:\n1. Residential Customer\n2. Commercial Customer\n3. Done")
@@ -64,6 +67,9 @@ fun main() {
     }
 }
 
+//Input options to create an instance and calculate the quote
+
+//Residential
 fun quoteResidentialCustomer() {
     print("Enter Customer Name: ")
     val name = readln()
@@ -80,6 +86,7 @@ fun quoteResidentialCustomer() {
     customer.calculateWeeklyCharge()
 }
 
+//Commercial
 fun quoteCommercialCustomer() {
     print("Enter Customer Name: ")
     val name = readln()
