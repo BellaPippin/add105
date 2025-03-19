@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HelloWorld</string>
+    <string name="txtName">Maria</string>
+    <string name="btnText">Go Somewhere</string>
+    <string name="bioText">This is some text. Lorem Ipsum.</string>
+
 </resources>
